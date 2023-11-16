@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 .par{
     display: flex;
     height: 100vh;
@@ -9,10 +13,49 @@
     resize:horizontal;
     width: 50%;
     overflow: auto;
+    background-color: aliceblue;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
 }
 .rbox{
     resize:horizontal;
-    background-color: rgb(5, 24, 24);
     width: 50%;
     overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    width: 50%;
+    background-color: #f2f7fe;
+    text-align: center;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #6799FF;
+    border-style: dotted;
+    border-radius: 2rem;
+
+}
+
+.imgheading{
+    color:#6799FF;
+    font-size: 14px;
+    font-weight: bold;
+}
+.supported{
+    color:#6799FF;
+    font-size: 12px;
+}
+
+.linkbtn{
+    width: 50%;
+    height: 10%;
+    background-color: #7c43f5;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
