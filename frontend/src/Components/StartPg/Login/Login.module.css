@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.par{
+    height:100vh;
+    width: 100vw;
+    background-image: url('../../../assets/startbg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover; 
+    padding: 0;
+    position: relative;
+    
+}
+.card{
+    position: absolute;
+    transform:translate(-50%,-50%);
+    top:50%;
+    left: 50%;
+}
+
+.text{
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.leftcard{
+    background-color: #242442;
+    width: 50%;
+}
