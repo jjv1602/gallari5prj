@@ -5,6 +5,8 @@ import { FaUserAlt } from "react-icons/fa";
 import { FiEye } from "react-icons/fi";
 import { useToast } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom';
+import { Link } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 import axios from 'axios';
 const Login = () => {
   const toast = useToast();
@@ -38,6 +40,9 @@ const Login = () => {
         isClosable: true,
       })
     }
+  }
+  const regscreen=()=>{
+    navigate("/register");
   }
   return (
     <div className={st.par}>
@@ -94,6 +99,10 @@ const Login = () => {
             <Button variant='solid' colorScheme='blue' onClick={submitHandler}>
               Submit
             </Button>
+
+            <Link  isExternal ml={'3vw'} textDecoration={'underline'} onClick={regscreen}>
+              New User ? Register <ExternalLinkIcon mx='2px' />
+            </Link>
           </CardBody>
         </Stack>
       </Card>

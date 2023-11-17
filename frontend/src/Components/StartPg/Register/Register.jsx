@@ -6,6 +6,8 @@ import { FaUserAlt } from "react-icons/fa";
 import { FiEye } from "react-icons/fi";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 const Register = () => {
   const [show, setShow] = useState(false);
   const [name, setName] = useState();
@@ -29,11 +31,14 @@ const Register = () => {
       );
 
       localStorage.setItem("userInfo", JSON.stringify(data));
-      navigate('/design');
+      navigate('/');
 
     } catch (error) {
       console.log(error.response);
     }
+  }
+  const logscreen=()=>{
+    navigate("/");
   }
   return (
     <div className={st.par}>
@@ -102,6 +107,9 @@ const Register = () => {
             <Button variant='solid' colorScheme='blue' onClick={submitHandler}>
               Submit
             </Button>
+            <Link  isExternal ml={'3vw'} textDecoration={'underline'} onClick={logscreen}>
+              Existing User ? Login <ExternalLinkIcon mx='2px' />
+            </Link>
           </CardBody>
         </Stack>
       </Card>

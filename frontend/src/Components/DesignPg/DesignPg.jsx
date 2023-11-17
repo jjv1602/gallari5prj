@@ -26,6 +26,7 @@ const DesignPg = () => {
     const [url, setUrl] = useState();
     const [actual, setActual] = useState();
     const [toast,useToast]=useState();
+    const [name,setName]=useState(JSON.parse(localStorage.getItem('userInfo')).name);
     function EditableControls() {
         const {
             isEditing,
@@ -137,7 +138,7 @@ const DesignPg = () => {
                 <Heading as='h1' size='md' textAlign='left' >
                     <Editable
                         textAlign='center'
-                        defaultValue='Philips ⚡️'
+                        value={name}
                         fontSize='2xl'
                         isPreviewFocusable={false}
                     >
@@ -150,7 +151,7 @@ const DesignPg = () => {
 
                 <InputGroup size='sm'>
                     <InputLeftAddon children='https://' backgroundColor='#0180ff' />
-                    <Input placeholder='mysite' />
+                    <Input placeholder='mysite' value={name} />
                     <InputRightAddon children='.com' backgroundColor='#0180ff' />
                 </InputGroup>
 
@@ -227,7 +228,7 @@ const DesignPg = () => {
                 </div>
             </div>
             <div className={st.rbox}>
-                <Mobile bgimg={bgimg} link={arr}></Mobile>
+                <Mobile bgimg={bgimg} link={arr} name={name}></Mobile>
 
             </div>
 
