@@ -2,89 +2,183 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-.par{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    padding: 3%;
-    background-color: #111111;
-    color: white;
-    font-family: 'Poppins';
-}
-.lbox{
-    resize:horizontal;
-    width: 50%;
-    overflow: auto;
-    background-color: #111111;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    gap: 3vh;
-}
-.rbox{
-    resize:horizontal;
-    width: 50%;
-    overflow: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.box{
-    width: 50%;
-    background-color: #f2f7fe;
-    text-align: center;
-    height: 25vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border:2px solid #6799FF;
-    border-style: dotted;
-    border-radius: 2rem;
-
-}
-
-.imgheading{
-    color:#6799FF;
-    font-size: 14px;
-    font-weight: bold;
-}
-.supported{
-    color:#6799FF;
-    font-size: 12px;
-}
-
-.linkbtn{
-    width: 50%;
-    height: 10%;
-    background-color: #7c43f5;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-}
-
-.lnkbox{
-    height: 70vh;
-    width: 100%;
-    overflow-y: auto;
-    padding: 1%;
-}
-
-/* Scrollbar design */
-::-webkit-scrollbar {
-    width: 7px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+@media (min-width:900px){
+    .par{
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        padding: 3%;
+        background-color: #111111;
+        color: white;
+        font-family: 'Poppins';
+    }
+    .lbox{
+        resize:horizontal;
+        width: 50%;
+        overflow: auto;
+        background-color: #111111;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+    }
+    .rbox{
+        resize:horizontal;
+        width: 50%;
+        overflow: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box{
+        width: 50%;
+        background-color: #f2f7fe;
+        text-align: center;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border:2px solid #6799FF;
+        border-style: dotted;
+        border-radius: 2rem;
     
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #0183fa;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+    }
+    
+    .imgheading{
+        color:#6799FF;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .supported{
+        color:#6799FF;
+        font-size: 12px;
+    }
+    
+    .linkbtn{
+        width: 50%;
+        height: 10%;
+        background-color: #7c43f5;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .lnkbox{
+        height: 70vh;
+        width: 100%;
+        overflow-y: auto;
+        padding: 1%;
+    }
+    
+    /* Scrollbar design */
+    ::-webkit-scrollbar {
+        width: 7px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #0183fa;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+}
+@media(max-width:900px){
+    .par{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        padding: 3%;
+        background-color: #111111;
+        color: white;
+        font-family: 'Poppins';
+        gap:5vh;
+        overflow-y: hidden;
+    }
+    .lbox{
+        
+        min-height: 140vh;
+        width: 100%;
+        overflow: auto;
+        background-color: #111111;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+    }
+    .rbox{
+        
+        width: 100%;
+        overflow: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box{
+        width: 50%;
+        background-color: #f2f7fe;
+        text-align: center;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border:2px solid #6799FF;
+        border-style: dotted;
+        border-radius: 2rem;
+    
+    }
+    
+    .imgheading{
+        color:#6799FF;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .supported{
+        color:#6799FF;
+        font-size: 12px;
+    }
+    
+    .linkbtn{
+        width: 50%;
+        height: 10%;
+        background-color: #7c43f5;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .lnkbox{
+        height: 70vh;
+        width: 100%;
+        overflow-y: auto;
+        padding: 1%;
+    }
+    
+    /* Scrollbar design */
+    ::-webkit-scrollbar {
+        width: 7px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #0183fa;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+}
+

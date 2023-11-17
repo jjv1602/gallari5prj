@@ -14,7 +14,7 @@ import {  Stat,StatLabel,   StatNumber,   StatHelpText,   StatArrow,   StatGroup
 import Links from '../Links/Links';
 
 const DesignPg = () => {
-    const [arr, setArr] = useState([{ url: "https:///google.com", actual: "asdasda",type:1 }, { url: "https:///sada", actual: "asdasda" ,type:2}]);
+    const [arr, setArr] = useState([{ url: "https:///google.com", actual: "asdasda",type:3 },{ url: "https:///google.com", actual: "asdasda",type:3 },{ url: "https:///google.com", actual: "asdasda",type:3 },{ url: "https:///google.com", actual: "asdasda",type:3 }, { url: "https:///sada", actual: "asdasda" ,type:2}]);
     
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [bgimg,setBg]=useState('https://res.cloudinary.com/dxxu4powb/image/upload/v1700227215/mobbg_e8ieg7.jpg');
