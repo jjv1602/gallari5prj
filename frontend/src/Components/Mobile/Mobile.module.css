@@ -1,7 +1,16 @@
 .mob{
     height: 90%;
     width: 45%;
-    border-radius: 2rem;
-    background-color: aqua;
+    position: relative;
+}
 
+.lst{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    background-color: #ffffff;
+    opacity: 0.3;
+    padding: 2%;
 }
