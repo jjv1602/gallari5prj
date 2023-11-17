@@ -15,10 +15,10 @@ app.use('/api/users',userRoutes);   //userRoutes is imported above
 if (process.env.NODE_ENV === 'production') {
     const __dirname1 = path.resolve();
     
-    app.use(express.static(path.join(__dirname1, "/frontend/dist")));
+    app.use(express.static(path.join(__dirname1, "/frontend/build")));
   
     app.get("*", (req, res) =>{
-      res.sendFile(path.resolve(__dirname1, "frontend", "dist", "index.html"))
+      res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
 
     });
   } else {
