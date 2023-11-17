@@ -64,6 +64,15 @@
         color: white;
         font-family: 'Poppins', sans-serif;
     }
+    .savebtn{
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        height: 10%;
+        background-color: #43daf5;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
     
     .lnkbox{
         height: 70vh;

@@ -51,7 +51,7 @@ const authUser = asyncHandler(async (req, res) => {
         email: user.email,
         token: generateToken(user._id), 
         links:user.links,
-        bgimg:user.bgimg
+        bgimg:user.bgimg,
       });
     } else {
       res.status(401);
@@ -60,9 +60,15 @@ const authUser = asyncHandler(async (req, res) => {
   });
 
 const update=asyncHandler(async(req,res)=>{
-  const { email } = req.body;
+  const { email,links } = req.body;
+  try{
   const user = await User.findOne({ email });
   user.links = links;
-  res.status(201).json("success");
+  await user.save();
+  console.log(user.links);
+  res.status(200).json({"links":user.links});
+  }catch(err){
+    res.status(400).json(err.response);
+  }
 })
 module.exports = { registerUser,authUser,update};

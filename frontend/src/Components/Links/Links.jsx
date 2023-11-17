@@ -15,6 +15,9 @@ import {
     StatGroup,
 } from '@chakra-ui/react'
 const Links = (props) => {
+    const updatelist=async(i)=>{
+        props.deletelink(i);
+    }
     return (
         <>
             {
@@ -48,7 +51,7 @@ const Links = (props) => {
                                         </Stat>
                                     </Box>
                                 </Text>
-                                <Button colorScheme='teal' size='sm' w='90%'>
+                                <Button colorScheme='teal' size='sm' w='90%' onClick={()=>updatelist(i)}>
                                     Remove
                                 </Button>
                             </Box>
