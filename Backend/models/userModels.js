@@ -20,6 +20,10 @@ const userSchema = mongoose.Schema(
             actual:{type:String},
             type:{type:Number},
         }],
+        bgimg:{
+            type:String,
+            default:"https://res.cloudinary.com/dxxu4powb/image/upload/v1700227215/mobbg_e8ieg7.jpg",
+        }
     },
     {
         timestamps: true,

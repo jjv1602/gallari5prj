@@ -15,14 +15,6 @@ const Register = () => {
   const handleClick = () => setShow(!show)
   const submitHandler = async (par) => {
     par.preventDefault();
-    console.log(name);
-    console.log(email);
-    console.log(password);
-    console.log("_____________________________asdasd");
-    console.log("_____________________________asdasd");
-    console.log("_____________________________asdasd");
-    console.log("_____________________________asdasd");
-    console.log("_____________________________asdasd");
     try {
       const config = {
         headers: {

@@ -51,6 +51,7 @@ const authUser = asyncHandler(async (req, res) => {
         email: user.email,
         token: generateToken(user._id), 
         links:user.links,
+        bgimg:user.bgimg
       });
     } else {
       res.status(401);

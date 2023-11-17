@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import st from './DesignPg.module.css';
 import { Button, FormControl, FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, useDisclosure, Heading, useEditableControls, Flex, IconButton, ButtonGroup } from '@chakra-ui/react'
 import { Select } from '@chakra-ui/react'
@@ -15,7 +15,7 @@ import Links from '../Links/Links';
 
 const DesignPg = () => {
     const [arr, setArr] = useState([{ url: "https:///google.com", actual: "ph:insta",type:1},{ url: "https:///google.com", actual: "ph:fb",type:3 },{ url: "https:///google.com", actual: "ph:yt",type:2 },{ url: "https:///google.com", actual: "ph:website",type:4 }]);
-    
+    const [lnks,setLnk]=useState();
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [bgimg,setBg]=useState('https://res.cloudinary.com/dxxu4powb/image/upload/v1700227215/mobbg_e8ieg7.jpg');
     function EditableControls() {
@@ -37,6 +37,11 @@ const DesignPg = () => {
             </Flex>
         )
     }
+
+    useEffect(() => {
+        console.log(JSON.parse(localStorage.getItem('userInfo')))
+        setLnk(JSON.parse(localStorage.getItem('userInfo')))
+    }, [])
     return (
         <div className={st.par}>
             <div className={st.lbox}>

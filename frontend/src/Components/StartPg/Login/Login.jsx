@@ -3,10 +3,42 @@ import st from './Login.module.css';
 import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Button, Image, Text, FormControl, FormLabel, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
 import { FaUserAlt } from "react-icons/fa";
 import { FiEye } from "react-icons/fi";
+import { useToast } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 const Login = () => {
-
+  const toast = useToast();
   const [show, setShow] = useState(false)
   const handleClick = () => setShow(!show)
+  const navigate = useNavigate();
+  const [password, setP] = useState();
+  const [email, setE] = useState();
+  const submitHandler = async (par) => {
+    par.preventDefault();
+    try {
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+
+      const { data } = await axios.post(
+        "/api/users/login",
+        { email, password },
+        config
+      );
+
+      localStorage.setItem("userInfo", JSON.stringify(data));
+      navigate("/design");
+
+    } catch (error) {
+      console.log(error);
+      toast({
+        title: `Incorrect Password`,
+        isClosable: true,
+      })
+    }
+  }
   return (
     <div className={st.par}>
       <Card
@@ -19,9 +51,9 @@ const Login = () => {
       >
         <div className={st.leftcard}>
           <Heading as='h3' size='lg'>
-            LinkTree 
+            LinkTree
           </Heading>
-          
+
           <Text>Grow Your Business with Us </Text>
           <Text> Directly design the UI of your domain </Text>
 
@@ -37,6 +69,7 @@ const Login = () => {
                 pr='4.5rem'
                 type='email'
                 placeholder='Enter Email'
+                onChange={(e) => setE(e.target.value)}
               />
               <InputRightElement width='4.5rem'>
                 <FaUserAlt />
@@ -49,6 +82,7 @@ const Login = () => {
                 pr='4.5rem'
                 type={show ? 'text' : 'password'}
                 placeholder='Enter password'
+                onChange={(e) => setP(e.target.value)}
               />
               <InputRightElement width='4.5rem'>
                 <Button h='1.75rem' size='sm' onClick={handleClick}>
@@ -57,7 +91,7 @@ const Login = () => {
               </InputRightElement>
             </InputGroup>
             <br></br>
-            <Button variant='solid' colorScheme='blue'>
+            <Button variant='solid' colorScheme='blue' onClick={submitHandler}>
               Submit
             </Button>
           </CardBody>
