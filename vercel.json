@@ -12,8 +12,11 @@
     ],
     "routes": [
         {
-            "src": "/[^.]+",
-            "dest": "/"
-        }
+            "src": "/(.*)",
+            "dest": "/Backend/index.js"
+        }, {
+            "src": "/(.*)",
+            "dest": "/frontend/dist/$1"
+          }
     ]
 }
