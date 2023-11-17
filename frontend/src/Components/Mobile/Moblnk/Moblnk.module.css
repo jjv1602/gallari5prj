@@ -2,7 +2,7 @@
     background-color: #0b0b0b;
     border-radius: 3rem;
     display: flex;
-    width: min-content;
     align-items: center;
+    justify-content: space-between;
     gap: 1.5vw;
 }

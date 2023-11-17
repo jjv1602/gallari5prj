@@ -15,7 +15,7 @@ const Mobile = (props) => {
         borderRadius= '2rem'
       />
       <div className={st.lst}>
-        <Text color='white' fontSize={{lg:'2xl',base:'md'}}>Company Name</Text>
+        <Text color='white' fontSize={{lg:'2xl',base:'md'}}>Philips</Text>
         {props.link.map((el,ind)=>{
           return(
             <>

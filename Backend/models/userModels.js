@@ -15,10 +15,6 @@ const userSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        mob:{
-            type: String,
-            required: true,
-        },
         links:[{
             url:{type:String},
             actual:{type:String},

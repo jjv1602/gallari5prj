@@ -26,7 +26,6 @@ if (process.env.NODE_ENV === 'production') {
       res.send("API is running.");
     });
   }
-
 //   ------------------------
 const { errorHandler, notFound } = require('./middlewares/errorMiddlewares');
 app.use(notFound)

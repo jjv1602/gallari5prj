@@ -9,7 +9,6 @@ const Login = () => {
   const handleClick = () => setShow(!show)
   return (
     <div className={st.par}>
-      <FaUserAlt />
       <Card
         direction={{ base: 'column', sm: 'row' }}
         overflow='hidden'
@@ -19,7 +18,13 @@ const Login = () => {
         className={st.card}
       >
         <div className={st.leftcard}>
-          sada
+          <Heading as='h3' size='lg'>
+            LinkTree 
+          </Heading>
+          
+          <Text>Grow Your Business with Us </Text>
+          <Text> Directly design the UI of your domain </Text>
+
         </div>
 
         <Stack >

@@ -14,7 +14,7 @@ import {  Stat,StatLabel,   StatNumber,   StatHelpText,   StatArrow,   StatGroup
 import Links from '../Links/Links';
 
 const DesignPg = () => {
-    const [arr, setArr] = useState([{ url: "https:///google.com", actual: "asdasda",type:3 },{ url: "https:///google.com", actual: "asdasda",type:3 },{ url: "https:///google.com", actual: "asdasda",type:3 },{ url: "https:///google.com", actual: "asdasda",type:3 }, { url: "https:///sada", actual: "asdasda" ,type:2}]);
+    const [arr, setArr] = useState([{ url: "https:///google.com", actual: "ph:insta",type:1},{ url: "https:///google.com", actual: "ph:fb",type:3 },{ url: "https:///google.com", actual: "ph:yt",type:2 },{ url: "https:///google.com", actual: "ph:website",type:4 }]);
     
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [bgimg,setBg]=useState('https://res.cloudinary.com/dxxu4powb/image/upload/v1700227215/mobbg_e8ieg7.jpg');
@@ -43,7 +43,7 @@ const DesignPg = () => {
                 <Heading as='h1' size='md' textAlign='left' >
                     <Editable
                         textAlign='center'
-                        defaultValue='Rasengan ⚡️'
+                        defaultValue='Philips ⚡️'
                         fontSize='2xl'
                         isPreviewFocusable={false}
                     >
@@ -66,9 +66,9 @@ const DesignPg = () => {
 
                 </FormControl>
                 <StatGroup>
-                    <Stat>
-                        <StatLabel>Clicked</StatLabel>
-                        <StatNumber>345</StatNumber>
+                    <Stat >
+                        <StatLabel fontSize='2vh'>Clicked</StatLabel>
+                        <StatNumber fontSize='2vh' >345</StatNumber>
                         <StatHelpText>
                             <StatArrow type='increase' />
                             23.36%
@@ -76,9 +76,9 @@ const DesignPg = () => {
                     </Stat>
 
                     <Stat>
-                        <StatLabel>Shared</StatLabel>
-                        <StatNumber>45</StatNumber>
-                        <StatHelpText>
+                        <StatLabel fontSize='2vh'>Shared</StatLabel>
+                        <StatNumber fontSize='2vh'r>45</StatNumber>
+                        <StatHelpText fontSize='2vh'>
                             <StatArrow type='decrease' />
                             9.05%
                         </StatHelpText>
