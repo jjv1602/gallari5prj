@@ -13,19 +13,33 @@ app.use('/api/users',userRoutes);   //userRoutes is imported above
 
 // ---------production ------------------
 if (process.env.NODE_ENV === 'production') {
-    const __dirname1 = path.resolve();
-    
-    app.use(express.static(path.join(__dirname1, 'frontend','dist')));
-  
-    app.get("*", (req, res) =>{
-      res.sendFile(path.resolve(__dirname1, "frontend", "dist", "index.html"))
+  const __dirname1 = path.resolve();
 
+  const staticPath = path.join(__dirname1, 'frontend', 'dist');
+  console.log('Static Path:', staticPath);
+
+  app.use(express.static(staticPath));
+
+  app.get('*', (req, res) => {
+    const indexPath = path.resolve(__dirname1, 'frontend', 'dist', 'index.html');
+    console.log('Index Path:', indexPath);
+    res.sendFile(indexPath, (err) => {
+      if (err) {
+        console.error('Error sending file:', err);
+        res.status(500).send('Internal Server Error');
+      }
     });
-  } else {
-    app.get("/", (req, res) => {
-      res.send("API is running.");
-    });
-  }
+  });
+
+  app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
+  });
+} else {
+  app.get('/', (req, res) => {
+    res.send('API is running.');
+  });
+}
 //   ------------------------
 const { errorHandler, notFound } = require('./middlewares/errorMiddlewares');
 app.use(notFound)
