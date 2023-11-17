@@ -67,8 +67,8 @@ const DesignPg = () => {
                 </FormControl>
                 <StatGroup>
                     <Stat>
-                        <StatLabel>Sent</StatLabel>
-                        <StatNumber>345,670</StatNumber>
+                        <StatLabel>Clicked</StatLabel>
+                        <StatNumber>345</StatNumber>
                         <StatHelpText>
                             <StatArrow type='increase' />
                             23.36%
@@ -76,7 +76,7 @@ const DesignPg = () => {
                     </Stat>
 
                     <Stat>
-                        <StatLabel>Clicked</StatLabel>
+                        <StatLabel>Shared</StatLabel>
                         <StatNumber>45</StatNumber>
                         <StatHelpText>
                             <StatArrow type='decrease' />
@@ -84,7 +84,7 @@ const DesignPg = () => {
                         </StatHelpText>
                     </Stat>
                 </StatGroup>
-                <button className={st.linkbtn} onClick={onOpen} >Add New Link </button>
+                <button className={st.linkbtn}  onClick={onOpen} >Add New Link </button>
 
                 <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
