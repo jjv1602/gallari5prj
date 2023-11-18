@@ -43,7 +43,10 @@ npm run dev
 - [x] <b>Resizable Containers - Users can resize containers
 - [x] <b>User can change background image of the mobile layout
 
-## Architecture Diagram
+## Architecture Diagram and Demonstration 
+- [x] <b>Demo video of the project </b>-  [Demo Video](https://drive.google.com/file/d/1AnU84NAWfe6Cf8fHm3NFewiqdXAd80qR/view?usp=sharing).
+<br><br>
   <img src="/Images/design.jpg" width="80%" height="80%">
   <img src="/Images/login.jpg" width="80%" height="80%">
+  <img src="/Images/newlink.jpg" width="80%" height="80%">
 
