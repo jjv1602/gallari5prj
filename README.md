@@ -44,7 +44,7 @@ npm run dev
 - [x] <b>User can change background image of the mobile layout
 
 ## Architecture Diagram and Demonstration 
-- [x] <b> Deployed Website URL </b>-  [Demo Video](https://gallari5prj-hoinsd8lm-jjv1602.vercel.app/).
+- [x] <b> Deployed Website URL </b>-  [Website URL](https://gallari5prj-hoinsd8lm-jjv1602.vercel.app/).
 - [x] <b>Demo video of the project </b>-  [Demo Video](https://drive.google.com/file/d/1AnU84NAWfe6Cf8fHm3NFewiqdXAd80qR/view?usp=sharing).
 <br><br>
   <img src="/Images/design.jpg" width="80%" height="80%">
