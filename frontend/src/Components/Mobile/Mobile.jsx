@@ -16,10 +16,10 @@ const Mobile = (props) => {
       />
       <div className={st.lst}>
         <Text color='white' fontSize={{lg:'2xl',base:'md'}}>{props.name}</Text>
-        {props.link && props.link.map((el,ind)=>{
+        {props.link && props.link.map((el,i)=>{
           return(
             <>
-              <Moblnk url={el.url} actual={el.actual} type={el.type}></Moblnk>
+              <Moblnk key={i} url={el.url} actual={el.actual} type={el.type}></Moblnk>
             </>
           )
         })}

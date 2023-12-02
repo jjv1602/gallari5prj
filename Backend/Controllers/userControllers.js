@@ -71,4 +71,17 @@ const update=asyncHandler(async(req,res)=>{
     res.status(400).json(err.response);
   }
 })
-module.exports = { registerUser,authUser,update};
+const save=asyncHandler(async(req,res)=>{
+  const {email,links,bg,name}=req.body;
+  try{
+    const user = await User.findOne({ email });
+    user.links = links;
+    user.bgimg=bg;
+    user.name=name;
+    await user.save();
+    res.status(200).json('Saved successfully');
+    }catch(err){
+      res.status(400).json(err.response);
+    }
+})
+module.exports = { registerUser,authUser,update,save};

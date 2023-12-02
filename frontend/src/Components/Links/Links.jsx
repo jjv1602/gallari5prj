@@ -23,7 +23,7 @@ const Links = (props) => {
             {
                 props.link.map((el, i) => {
                     return (
-                        <Card backgroundColor='#1f1e1f' w='100%' color='white' marginBottom='3vh' paddingBottom='2%' >
+                        <Card backgroundColor='#1f1e1f' w='100%' color='white' marginBottom='3vh' paddingBottom='2%' key={i}>
                             <Box>
                                 <Heading size='xs' textTransform='uppercase' textAlign='left' paddingLeft='2%'>
                                     {el.actual}
