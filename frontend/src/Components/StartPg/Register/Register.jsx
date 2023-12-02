@@ -47,7 +47,7 @@ const Register = () => {
         overflow='hidden'
         variant='outline'
         w='80vw'
-        h='50vh'
+        h='70vh'
         className={st.card}
       >
         <div className={st.leftcard}>
