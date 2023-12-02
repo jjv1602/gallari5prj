@@ -25,13 +25,14 @@ const DesignPg = () => {
     const [arr, setArr] = useState([]);
     const [email, setEmail] = useState(JSON.parse(localStorage.getItem('userInfo')).email);
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const [bgimg, setBg] = useState(JSON.parse(localStorage.getItem('userInfo')).bgimg);
+    const [bgimg, setBg] = useState();
     // Modal New Link Variables
     const [type, setType] = useState();
     const [url, setUrl] = useState();
     const [actual, setActual] = useState();
     const toast = useToast();
-    const [name, setName] = useState(JSON.parse(localStorage.getItem('userInfo')).name);
+    const [name, setName] = useState("");
+    const[companyurl,setCurl]=useState(name);
     function EditableControls() {
         const {
             isEditing,
@@ -84,7 +85,7 @@ const DesignPg = () => {
             actual: actual,
             type: type,
         }
-        console.log(newl);
+        
         const newArr = [...arr, newl];
         setArr(newArr);
         try {
@@ -163,6 +164,8 @@ const DesignPg = () => {
     useEffect(() => {
         // console.log(JSON.parse(localStorage.getItem('userInfo')))
         setArr(JSON.parse(localStorage.getItem('userInfo')).links);
+        setName(JSON.parse(localStorage.getItem('userInfo')).name);
+        setBg(JSON.parse(localStorage.getItem('userInfo')).bgimg);
 
     }, [])
     return (
@@ -188,7 +191,7 @@ const DesignPg = () => {
 
                 <InputGroup size='sm'>
                     <InputLeftAddon children='https://' backgroundColor='#0180ff' />
-                    <Input placeholder='mysite' value={name} />
+                    <Input placeholder='mysite' value={companyurl} onChange={(e)=>setCurl(e.target.url)} />
                     <InputRightAddon children='.com' backgroundColor='#0180ff' />
                 </InputGroup>
 

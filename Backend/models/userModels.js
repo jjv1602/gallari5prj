@@ -11,6 +11,8 @@ const userSchema = mongoose.Schema(
             required: true,
             unique: true,
         },
+        websiteurl:{type: String,default:"temp"},
+
         password: {
             type: String,
             required: true,
